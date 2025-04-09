@@ -1,0 +1,3 @@
+Main - #5f5449
+Secondary -#9b8269
+Backgrounds - #afa193
