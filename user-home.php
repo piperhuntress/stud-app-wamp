@@ -5,12 +5,16 @@
     <link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
-<!-- Include the user-menu -->
+<?php
+include "user-menu.php";
+?>
 
 <div class="main">
     <img src="home.png" class="home-img"><br/>
 </div>
 
-<!-- Include the footer -->
+<?php
+include "footer.php";
+?>
 </body>
 </html>

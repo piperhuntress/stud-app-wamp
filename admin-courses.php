@@ -5,8 +5,9 @@
 
 </head>
 <body>
-<!-- Include the admin menu -->
-
+<?php
+include "admin-menu.php";
+?>
     <h2>Add New Course</h2>
     <form action="" method="post">
         <table>
@@ -38,7 +39,8 @@
             </tr>
         </table>
     </form>
-<!-- Include the footer -->
-
+    <?php
+include "footer.php";
+?>
 </body>
 </html>

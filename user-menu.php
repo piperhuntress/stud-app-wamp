@@ -1,8 +1,9 @@
 <header>
 <div class="menu">
 
-<!-- Add link to user-home.php, user-courses.php and logout.php -->
-
+<a href="user-home.php"> Home</a> 
+<a href="user-courses.php"> Courses </a>
+<a href="logout.php"> Logout</a>
 
 </div>
 </header>

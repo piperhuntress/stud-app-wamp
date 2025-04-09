@@ -5,12 +5,16 @@
     <link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
-<!-- Include the admin menu -->
+<?php
+include "admin-menu.php";
+?>
 
-<!-- Create a div, add the CSS class "main". Insert the image home.png and add the CSS class home-img. -->
+<div class="main">
+    <img src="home.png" class="home-img"><br/>
+</div>
 
-
-<!-- Include the footer -->
-
+<?php
+include "footer.php";
+?>
 </body>
 </html>

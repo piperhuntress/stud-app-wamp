@@ -5,8 +5,9 @@
     <link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
-<!-- Include the admin menu -->
-
+<?php
+include "admin-menu.php";
+?>
 
 <div class="main">
     <h1>Student Information System</h1>
@@ -58,7 +59,8 @@
     </form>    
 </div>
 
-<!-- Include the footer -->
-
+<?php
+include "footer.php";
+?>
 </body>
 </html>

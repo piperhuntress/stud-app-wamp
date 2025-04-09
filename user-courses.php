@@ -5,11 +5,12 @@
 
 </head>
 <body>
-<!-- Include the user-menu -->
->
+<?php
+include "user-menu.php";
+?>
 <h1>Courses</h1>
-
-<!-- Include the footer -->
-
+<?php
+include "footer.php";
+?>
 </body>
 </html>
