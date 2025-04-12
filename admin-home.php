@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>Learn.com-Student Information System</title>
-    <link rel="stylesheet" href="style.css"></link>
-</head>
+    <!-- Link to styles.css -->
+    </head>
 <body>
 <!-- Include the admin menu -->
 

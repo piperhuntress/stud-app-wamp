@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Learn.com-Student Information System</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Link to styles.css -->
 </head>
 <body>
     <h1>Student Information System</h1>
@@ -11,35 +11,35 @@
         <table>
             <tr>
                 <td>Username</td>
-                <td><input type="text" name="username"></td>
+                <td><input type="text" ></td>
             </tr>
             <tr>
                 <td>Password</td>
-                <td><input type="password" name="password"></td>
+                <td><input type="password" ></td>
             </tr>
             <tr>
                 <td>Student ID</td>
-                <td><input type="text" name="studid"></td>
+                <td><input type="text"></td>
             </tr>			
             <tr>
                 <td>Name</td>
-                <td><input type="text" name="name"></td>
+                <td><input type="text" ></td>
             </tr>
             <tr>
                 <td>Mobile Number</td>
-                <td><input type="number" name="mobile"></td>
+                <td><input type="number" ></td>
             </tr>
             <tr>
                 <td>Gender</td>
                 <td>
-                    <input type="radio" name="gender" value="male"> Male
-                    <input type="radio" name="gender" value="female"> Female
+                    <input type="radio"> Male
+                    <input type="radio"> Female
                 </td>
             </tr>
             <tr>
                 <td>Department</td>
                 <td>
-                    <select name="deptid">
+                    <select>
                         <option value="1">Information Technology</option>
                         <option value="2">Business Administration</option>
                         <option value="3">Engineering</option>
@@ -48,7 +48,7 @@
             </tr>
             <tr>
                 <td></td>
-                <td><input type="submit" value="Register" name="register"></td>
+                <td><input type="submit" value="Register" ></td>
             </tr>
         </table>
     </form>
