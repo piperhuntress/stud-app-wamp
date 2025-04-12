@@ -40,6 +40,7 @@ include "admin-menu.php";
         </table>
     </form>
     <?php
+    
 include "footer.php";
 ?>
 </body>
