@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Student Information System</h1>	
-<img src="banner2.png" class="img-login">
+<img src="banner.png" class="img-login">
 <h2 >Login</h2>
 <div class="login">
 <form>

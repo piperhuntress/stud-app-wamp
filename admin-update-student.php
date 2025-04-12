@@ -46,32 +46,6 @@
                     </select>
                 </td>
             </tr>
-            <tr>
-                <td>Course</td>
-                <td>
-                    <select name="ccode">
-                        <option value="web1">Web 1</option>
-                        <option value="web2">Web 2</option>
-                        <option value="math1">Math 1</option>
-                    </select>
-                </td>
-            </tr>  
-            <tr>
-                <td>Course Work</td>
-                <td><input type="number" name="cwork"></td>
-            </tr> 
-            <tr>
-                <td>Mid Exam</td>
-                <td><input type="number" name="me"></td>
-            </tr>  
-            <tr>
-                <td>Final Exam</td>
-                <td><input type="number" name="fe"></td>
-            </tr>                                       
-            <tr>
-                <td></td>
-                <td><input type="submit" value="Update" name="update"></td>
-            </tr>
         </table>
     </form>
 
