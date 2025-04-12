@@ -22,5 +22,6 @@ $stmt = $pdo->prepare($query);
 $stmt->execute([$username, $password, $studid, $name, $mobile, $gender, $deptid]);
  
 echo "Record added successfully!";
+header("Location:login.php")
 }
 ?>

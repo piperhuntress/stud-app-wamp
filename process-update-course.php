@@ -15,11 +15,10 @@ WHERE ccode = ?";
 // Prepare the statement using the PDO object
 $stmt = $pdo->prepare($query);
 
-print_r([$cdesc, $credit, $deptid, $ccode]);
 // Execute the statement with the actual values, including $ccode as the last parameter
 $stmt->execute([ $cdesc, $credit, $deptid,$ccode]);
  
 echo "Record updated successfully!";
-//header("Location: admin-courses.php"); //redirect to admin-courses.php
+header("Location: admin-courses.php"); //redirect to admin-courses.php
 }
 ?>

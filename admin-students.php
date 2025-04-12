@@ -38,7 +38,7 @@ echo "<tr>
         <th>Mobile</th>
         <th>Gender</th>
         <th>Department ID</th>
-        <th colspan=2>Actions</th>
+        <th colspan=3>Actions</th>
       </tr>";
  
 //4- Loop through the fetched student records and display each record in a row
@@ -52,11 +52,11 @@ foreach ($students as $student) {
             <td>    {$student['deptid']}  </td>
             <td>    <a href='admin-delete-student.php?username={$student['username']}' onclick=\"return confirm('Are you sure you want to delete this student?');\">Delete</a>  </td>
             <td>    <a href='admin-update-student.php?username={$student['username']}'>Update</a> </td>           
-          </tr>";
+            <td>    <a href='admin-student-courses.php?username={$student['username']}'>Registered Courses</a> </td>           
+            </tr>";
 }
 echo "</table>";
 echo "Number of records = $num_records";
-
 ?>
 
 </div>
