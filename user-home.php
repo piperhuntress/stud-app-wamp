@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+//Protect the page
+if (!isset($_SESSION['username']))
+    header("Location: login.php"); //Redirect if the user did not login
+?>
 <!Doctype>
 <html>
 <head>
@@ -10,6 +17,7 @@ include "user-menu.php";
 ?>
 
 <div class="main">
+    <h3><?php echo "Welcome:". $_SESSION['username'];?></h3>
     <img src="home.png" class="home-img"><br/>
 </div>
 

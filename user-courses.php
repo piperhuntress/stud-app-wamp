@@ -1,3 +1,9 @@
+<?php
+session_start();
+//Protect the page
+if (!isset($_SESSION['username']))
+    header("Location: login.php"); //Redirect if the user did not login
+?>
 <!Doctype>
 <html>
 <head>

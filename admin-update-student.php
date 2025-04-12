@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+//Protect the page
+if (!isset($_SESSION['admin']))
+    header("Location: login.php"); //Redirect if the user did not login
+?>
+<?php
 include "dbconnect.php";
  
 if (isset($_GET["username"])) {
