@@ -56,22 +56,6 @@
                     </select>
                 </td>
             </tr>  
-            <tr>
-                <td>Course Work</td>
-                <td><input type="number" name="cwork"></td>
-            </tr> 
-            <tr>
-                <td>Mid Exam</td>
-                <td><input type="number" name="me"></td>
-            </tr>  
-            <tr>
-                <td>Final Exam</td>
-                <td><input type="number" name="fe"></td>
-            </tr>                                       
-            <tr>
-                <td></td>
-                <td><input type="submit" value="Update" name="update"></td>
-            </tr>
         </table>
     </form>
 
