@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 12, 2025 at 01:19 PM
+-- Generation Time: Apr 12, 2025 at 06:03 PM
 -- Server version: 9.1.0
 -- PHP Version: 8.3.14
 
@@ -76,6 +76,19 @@ CREATE TABLE IF NOT EXISTS `student` (
   `deptid` int NOT NULL,
   PRIMARY KEY (`username`),
   KEY `dept` (`deptid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `studentcourse`
+--
+
+DROP TABLE IF EXISTS `studentcourse`;
+CREATE TABLE IF NOT EXISTS `studentcourse` (
+  `username` varchar(15) NOT NULL,
+  `ccode` varchar(10) NOT NULL,
+  PRIMARY KEY (`username`,`ccode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
