@@ -2,7 +2,7 @@
 session_start();
 
 //Protect the page
-if (!isset($_SESSION['admin']))
+if (!isset($_SESSION['username']))
     header("Location: login.php"); //Redirect if the user did not login
 ?>
 <?php
@@ -13,12 +13,12 @@ if (isset($_GET["ccode"])) {//2 - check if there is value for the course code fr
     //3-Retrieve the value and assign to a variable
     $ccode = $_GET['ccode'];
     //4-Create the query
-    $query="DELETE FROM course WHERE ccode = ?";
+    $query="DELETE FROM studentcourse WHERE ccode = ?";
     //5-Prepare the query
     $stmt = $pdo->prepare($query);
     //6-Execute the query
     $stmt->execute([$ccode]);
  
-    header("Location: admin-courses.php"); //redirect to admin-courses.php
+    header("Location: user-courses.php"); //redirect to user-courses.php
 }
 ?>
