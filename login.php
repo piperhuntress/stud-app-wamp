@@ -13,15 +13,15 @@
 <table>
 <tr>
 	<td>Username</td>
-	<td><input type="text"></td>
+	<td><input type="text" ></td>
 </tr>
 <tr>
 	<td>Password</td>
-	<td><input type="password"></td>
+	<td><input type="password" ></td>
 </tr>
 <tr>
 	<td></td>
-	<td><input type="submit" value="Login">
+	<td><input type="submit" value="Login" >
 	<p>Register <a href="register.php">here</a>. Forgot password.</p>
 	</td>
 </tr>

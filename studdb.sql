@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 12, 2025 at 09:57 AM
+-- Generation Time: Apr 12, 2025 at 01:19 PM
 -- Server version: 9.1.0
 -- PHP Version: 8.3.14
 
@@ -29,11 +29,12 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `course`;
 CREATE TABLE IF NOT EXISTS `course` (
-  `course-code` varchar(10) NOT NULL,
-  `course-desc` varchar(30) NOT NULL,
+  `ccode` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `cdesc` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `credit` int NOT NULL,
   `deptid` int NOT NULL,
-  PRIMARY KEY (`course-code`)
+  PRIMARY KEY (`ccode`),
+  KEY `dept-course` (`deptid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -45,9 +46,18 @@ CREATE TABLE IF NOT EXISTS `course` (
 DROP TABLE IF EXISTS `department`;
 CREATE TABLE IF NOT EXISTS `department` (
   `deptId` int NOT NULL AUTO_INCREMENT,
-  `deptName` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `deptName` varchar(30) NOT NULL,
   PRIMARY KEY (`deptId`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `department`
+--
+
+INSERT INTO `department` (`deptId`, `deptName`) VALUES
+(1, 'Information Technology'),
+(2, 'Business Administration'),
+(3, 'Information Technology');
 
 -- --------------------------------------------------------
 
@@ -71,6 +81,12 @@ CREATE TABLE IF NOT EXISTS `student` (
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `course`
+--
+ALTER TABLE `course`
+  ADD CONSTRAINT `dept-course` FOREIGN KEY (`deptid`) REFERENCES `department` (`deptId`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `student`

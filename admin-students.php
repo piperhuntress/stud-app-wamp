@@ -11,52 +11,47 @@ include "admin-menu.php";
 
 <div class="main">
     <h1>Student Information System</h1>
-    <h2>Register Student</h2>
-    <form action="" method="post">
-        <table>
-            <tr>
-                <td>Username</td>
-                <td><input type="text" name="username"></td>
-            </tr>
-            <tr>
-                <td>Password</td>
-                <td><input type="password" name="password"></td>
-            </tr>
-            <tr>
-                <td>Student ID</td>
-                <td><input type="text" name="studid"></td>
-            </tr>			
-            <tr>
-                <td>Name</td>
-                <td><input type="text" name="name"></td>
-            </tr>
-            <tr>
-                <td>Mobile Number</td>
-                <td><input type="number" name="mobile"></td>
-            </tr>
-            <tr>
-                <td>Gender</td>
-                <td>
-                    <input type="radio" name="gender" value="male"> Male
-                    <input type="radio" name="gender" value="female"> Female
-                </td>
-            </tr>
-            <tr>
-                <td>Department</td>
-                <td>
-                    <select name="deptid">
-                        <option value="1">Information Technology</option>
-                        <option value="2">Business Administration</option>
-                        <option value="3">Engineering</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" value="Register" name="register"></td>
-            </tr>
-        </table>
-    </form>    
+    <h2>Registered Students</h2>
+<?php
+//1 - include the database connection
+include 'dbconnect.php';
+ 
+//2- Query to fetch all records from the student table
+$query="SELECT * FROM student";
+$stmt = $pdo->query($query);
+$students = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$num_records=$stmt->rowCount(); // Get the number of rows returned by the query
+ 
+//3-Start the HTML table and include the headers
+echo "<table border='1' cellpadding='10' cellspacing='0'>";
+echo "<tr>
+        <th>Username</th>
+        <th>Student ID</th>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Gender</th>
+        <th>Department ID</th>
+        <th colspan=2>Actions</th>
+      </tr>";
+ 
+//4- Loop through the fetched student records and display each record in a row
+foreach ($students as $student) {
+    echo "<tr>
+            <td>    {$student['username']}</td>
+            <td>    {$student['studid']}  </td>
+            <td>    {$student['name']}    </td>
+            <td>    {$student['mobile']}  </td>
+            <td>    {$student['gender']}  </td>
+            <td>    {$student['deptid']}  </td>
+            <td>    <a href='admin-delete-student.php?username={$student['username']}' onclick=\"return confirm('Are you sure you want to delete this student?');\">Delete</a>  </td>
+            <td>    <a href='admin-update-student.php?username={$student['username']}'>Update</a> </td>           
+          </tr>";
+}
+echo "</table>";
+echo "Number of records = $num_records";
+
+?>
+
 </div>
 
 <?php
